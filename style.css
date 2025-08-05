@@ -1,0 +1,55 @@
+/* Custom styles for logo */
+.nav-logo {
+  height: 3rem !important;
+}
+
+.nav-logo svg {
+  height: 3rem !important;
+  width: auto !important;
+}
+
+/* Alternative selectors for better coverage */
+.h-7 {
+  height: 3rem !important;
+}
+
+.h-7 svg {
+  height: 3rem !important;
+  width: auto !important;
+}
+
+/* Force override with maximum specificity */
+header .nav-logo,
+nav .nav-logo,
+.navbar .nav-logo {
+  height: 3rem !important;
+}
+
+header .nav-logo svg,
+nav .nav-logo svg,
+.navbar .nav-logo svg {
+  height: 3rem !important;
+  width: auto !important;
+}
+
+/* Theme-based image display */
+.light-mode {
+  display: block !important;
+}
+
+.dark-mode {
+  display: none !important;
+}
+
+/* Dark theme overrides - Mintlify specific */
+[data-theme="dark"] .light-mode,
+.dark .light-mode,
+[class*="dark"] .light-mode {
+  display: none !important;
+}
+
+[data-theme="dark"] .dark-mode,
+.dark .dark-mode,
+[class*="dark"] .dark-mode {
+  display: block !important;
+}

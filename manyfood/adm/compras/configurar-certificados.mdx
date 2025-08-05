@@ -1,0 +1,104 @@
+---
+title: 'Configurar Certificados'
+description: 'Cadastrar certificados digitais para integração com a SEFAZ'
+---
+
+A tela de **Configurar Certificados** permite cadastrar e gerenciar certificados digitais necessários para integração com a SEFAZ (Secretaria da Fazenda), garantindo a conformidade fiscal e a autenticação segura das transações eletrônicas.
+
+Na tela inicial de **Configurar Certificados** é possível visualizar todas as configurações cadastradas, verificar seus status de validade e gerenciar as configurações de integração com a SEFAZ.
+
+<Frame>
+  <img 
+  className="block dark:hidden" 
+  src="/manyfood/img/light/compras/configurar_certificados_digitais_1.png"/>
+  
+</Frame>
+
+<Frame>
+  <img 
+  className="hidden dark:block" 
+  src="/manyfood/img/dark/compras/configurar_certificados_digitais_1.png"/>
+</Frame>
+
+Para conseguir cadastrar um novo certificado, basta clicar em **+** e será criado uma nova linha
+
+<Frame>
+  <img 
+  className="block dark:hidden" 
+  src="/manyfood/img/light/compras/configurar_certificados_digitais_3.png"/>
+  
+</Frame>
+
+<Frame>
+  <img 
+  className="hidden dark:block" 
+  src="/manyfood/img/dark/compras/configurar_certificados_digitais_3.png"/>
+</Frame>
+
+<Tabs>
+<Tab title="Dados do Certificado">
+- **Nome do Certificado**: Identificação única do certificado
+- **Arquivo .pfx/.p12**: Upload do arquivo do certificado digital
+- **Senha do Certificado**: Senha de acesso ao certificado
+- **CNPJ/CPF**: Documento do titular do certificado
+</Tab>
+
+<Tab title="Configurações SEFAZ">
+- **Ambiente**: Homologação ou Produção
+- **UF**: Estado para integração
+- **Tipo de Certificado**: A1 (arquivo) ou A3 (token/cartão)
+- **Validade**: Data de expiração do certificado
+</Tab>
+
+<Tab title="Parâmetros de Segurança">
+- **Criptografia**: Algoritmo de criptografia utilizado
+- **Hash**: Função hash para assinatura digital
+- **Protocolo**: Versão do protocolo de segurança
+- **Backup**: Configuração de backup automático
+</Tab>
+</Tabs>
+
+Para finalizar o cadastro do **Certificado** é necessário validar a integração com a SEFAZ e depois disso basta clicar em **Salvar**
+
+<Frame>
+  <img 
+  className="block dark:hidden" 
+  src="/manyfood/img/light/compras/configurar_certificados_digitais_4.png"/>
+  
+</Frame>
+
+<Frame>
+  <img 
+  className="hidden dark:block" 
+  src="/manyfood/img/dark/compras/configurar_certificados_digitais_4.png"/>
+</Frame>
+
+Pode acontecer de esquecer de preencher algum campo obrigatório ou inserir dados inválidos, com isso o ManyFood irá apresentar uma mensagem de erro, segue exemplo
+
+<Frame>
+  <img 
+  className="block dark:hidden" 
+  src="/manyfood/img/light/compras/configurar_certificados_digitais_2.png"/>
+  
+</Frame>
+
+<Frame>
+  <img 
+  className="hidden dark:block" 
+  src="/manyfood/img/dark/compras/configurar_certificados_digitais_2.png"/>
+</Frame>
+
+Caso o **Certificado** estiver correto irá aparecer uma mensagem de **Certificado cadastrado com sucesso** e será necessário clicar no botão **Voltar** para ir na página inicial de **Configurar Certificados**
+
+<Frame>
+  <img 
+  className="block dark:hidden" 
+  src="/manyfood/img/light/compras/configurar_certificados_digitais_5.png"/>
+  
+</Frame>
+
+<Frame>
+  <img 
+  className="hidden dark:block" 
+  src="/manyfood/img/dark/compras/configurar_certificados_digitais_5.png"/>
+</Frame>

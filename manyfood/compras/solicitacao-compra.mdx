@@ -1,0 +1,134 @@
+---
+title: 'Solicitação de Compra'
+description: 'Criação e gerenciamento de solicitações de compra'
+---
+
+# Solicitação de Compra
+
+**Menu:** B1Food → Compras → Solicitação de compra
+
+---
+
+A **Solicitação de Compras** é criada quando se tem a necessidade de comprar algo, 
+mas não tem informação de fornecedor ou preço, apenas tem-se o item que precisa,
+quantidade e data da entrega desejada. 
+
+Na tela inicial da **Solicitação de Compras** é possível ver todas que já foram 
+criadas e qual o **Status** de cada uma delas.
+
+<Frame>
+<img src="/images/solicitacao_01.png" alt="Tela inicial da solicitação de compras" />
+</Frame>
+
+<Note>
+**Legenda dos Status:**
+
+- **🟠 Aguardando envio**: Esse Status quer dizer que a Solicitação de Compras está aguardando para ser enviada para entrar na fila da integração com SAP Business One
+- **⚫ Aguardando integração**: Esse Status quer dizer que a Solicitação de Compras está na fila para integração no SAP Business One
+- **🔵 Solicitação em Andamento**: Esse Status quer dizer que a Solicitação de Compras entrou no SAP Bussines One e está aguardando criar um Solicitação de Compra à partir dela.
+- **🟢 Solicitação Gerou pedido**: Esse Status quer dizer que foi criado um Solicitação de Compra à partir dessa Solicitação de Compras
+- **🔴 Erro**: Esse Status quer dizer que o SAP Business One gerou algum erro, para saber qual é basta passar o mouse encima do Status
+</Note>
+
+Para conseguir criar uma nova, basta clicar em **Novo** e na próxima tela é necessário 
+informar quando precisa dos produtos e quais produtos/quantidades são necessários.
+
+<Frame>
+<img src="/images/solicitacao_02.png" alt="Tela de criação de solicitação" />
+</Frame>
+
+<Tabs>
+<Tab title="Cabeçalho">
+- **Data de Recebimento**: Informar a data necessária para recebimento do produto, essa data será replicada para todas as linhas.
+</Tab>
+
+<Tab title="Linhas">
+- **Item**: Informar o item que deseja solicitar.
+- **Data de Recebimento**: Será informado a mesma data do cabeçalho, mas é possível realizar alterações por item (caso necessário).
+- **Quantidade**: Informar a quantidade necessária (lembrando da conversão de medida)
+- **Unidade de Medida**: Informar a unidade de medida (Conversão de Caixa 12 UN (CX12UN)
+- **Preço**: Se estiver com a configuração marcada, irá aparecer esse campo informando o custo do item
+- **Em Estoque**: Se estiver com a configuração marcada, irá aparecer esse campo informando a quantidade desse item no estoque
+- **Ultima sincronização**: Se estiver com a configuração marcada, irá aparecer quando foi feito a consulta do estoque no SAP
+- **Sub Total**: Cálculo entre Quantidade multiplicando pelo Preço Unitário
+- **Ação**: Excluir a linha
+</Tab>
+</Tabs>
+
+Para finalizar o **Solicitação de Compras** é possível informar uma **Observação** para detalhar alguma informação e depois disso basta clicar em **Salvar**
+
+<Frame>
+<img src="/images/solicitacao_03.png" alt="Salvamento da solicitação" />
+</Frame>
+
+Pode acontecer de esquecer de preencher algum campo, com isso o B1Food irá apresentar uma mensagem de erro, segue exemplo
+
+<Frame>
+<img src="/images/solicitacao_13.png" alt="Mensagem de erro" />
+</Frame>
+
+Caso o **Solicitação de Compra** estiver certo irá aparecer uma mensagem de **Registro adicionado com sucesso** e será necessário clicar no botão **Voltar** para ir na página inicial do **Solicitação de Compra**
+
+<Frame>
+<img src="/images/solicitacao_04.png" alt="Confirmação de sucesso" />
+</Frame>
+
+Será listado o **Solicitação de Compra** que acabou de criar e com isso será listado 4 ações para esse **Solicitação de Compra**, segue abaixo explicativo de cada uma delas
+
+<Frame>
+<img src="/images/solicitacao_05.png" alt="Ações disponíveis para a solicitação" />
+</Frame>
+
+<Tabs>
+<Tab title="🔍 Visualizar">
+A ação **Visualizar** irá abrir o **Solicitação de Compra** para poder avaliar algum item por exemplo.
+<Frame>
+<img src="/images/solicitacao_06.png" alt="Visualização da solicitação" />
+</Frame>
+</Tab>
+
+<Tab title="✏️ Editar">
+A ação **Editar** irá abrir o **Solicitação de Compra** para realizar alguma edição
+<Frame>
+<img src="/images/solicitacao_07.png" alt="Edição da solicitação" />
+</Frame>
+</Tab>
+
+<Tab title="✅ Enviar">
+A ação **Enviar** irá enviar para o SAP Business One a criação desse **Solicitação de Compra**
+<Frame>
+<img src="/images/solicitacao_08.png" alt="Envio da solicitação" />
+</Frame>
+</Tab>
+
+<Tab title="❌ Excluir">
+A ação **Excluir** irá apagar o **Solicitação de Compra** criado
+<Frame>
+<img src="/images/solicitacao_09.png" alt="Exclusão da solicitação" />
+</Frame>
+</Tab>
+</Tabs>
+
+Se você enviou o **Solicitação de Compra**, **depende da configuração** do seu B1Food ele pode ter ido direto para integrar com o SAP Business One ou ele pode ter entrado na **aprovação**, pode ser que você que faça ela ou outro usuário, mas irei explicar como realizar essa aprovação
+
+<Frame>
+<img src="/images/solicitacao_10.png" alt="Tela de aprovação" />
+</Frame>
+
+<Tabs>
+<Tab title="👍 Aprovar">
+A ação **Aprovar** irá enviar para o SAP Business One a criação desse **Solicitação de Compra**
+<Frame>
+<img src="/images/solicitacao_11.png" alt="Aprovação da solicitação" />
+</Frame>
+</Tab>
+
+<Tab title="👎 Rejeitar">
+A ação **Rejeitar** será necessário informar o **Motivo** que rejeitou, para que o usuário que fez saiba e consiga realizar as devidas alterações para reenviar novamente.
+<Frame>
+<img src="/images/solicitacao_12.png" alt="Rejeição da solicitação" />
+</Frame>
+</Tab>
+</Tabs>
+
+Caso o **Solicitação de Compra** for aprovado, ele irá entrar para fila de envio para o SAP Bussines One, durante esse processo o **Status** ficará ⚫, caso der tudo certo o **Status** irá ficar 🔵 e se der algum erro ao integrar com o SAP Business One o **Status** irá ficar 🔴 e irá apresentar o erro

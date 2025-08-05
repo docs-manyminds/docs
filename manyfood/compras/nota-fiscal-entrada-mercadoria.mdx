@@ -1,0 +1,410 @@
+---
+title: 'Nota Fiscal de Entrada - Mercadoria'
+description: 'Processamento de notas fiscais de entrada de mercadorias'
+---
+
+## NF-e - Manual
+
+A **Nota fiscal de Entrada - Manual** são os lançamentos de documentos que não possuem XML (despesas, serviços ou documentos não fiscais), onde será criado no SAP Business One uma Nota Fiscal de Entrada.
+
+Na tela inicial da **Nota fiscal de Entrada - Manual** é possível consultar todas que já foram criadas e qual o **Status** de cada uma delas.
+
+<Frame>
+<img src="/images/nf_entrada_01.png" alt="Tela inicial das notas fiscais de entrada" />
+</Frame>
+
+<Note>
+**Legenda dos Status:**
+
+- **🟠 Aguardando ciência**: Esse Status quer dizer que a Nota Fiscal de Entrada está aguardando para ser realizado a ciência da operação (manifesto) ou a não ciência da operação
+- **🔴 Documento mal informado**: Esse Status quer dizer que o Fornecedor não existe no SAP Business One ou não existe o De Para de Itens para esse Fornecedor, basta passar o mouse no Status que irá te apresentar
+- **🟠 Documento aguardando envio**: Esse Status quer dizer o Fornecedor e De Para estão corretos, basta realizar as modificações do documento para depois enviar para o SAP Business One
+- **⚫ Aguardando retorno do ERP**: Esse Status quer dizer que a Nota Fiscal de Entrada está na fila para integração no SAP Business One
+- **🟢 Finalizado**: Esse Status quer dizer que foi criado uma Nota Fiscal de Entrada no SAP Business One (pode ser um esboço também, depende da sua configuração)
+- **🔴 Erro**: Esse Status quer dizer que o SAP Business One gerou algum erro, para saber qual é basta passar o mouse encima do Status
+</Note>
+
+Para conseguir criar uma nova, basta clicar em **Novo** e na próxima tela é necessário informar os campos necessários
+
+<Frame>
+<img src="/images/nf_entrada_02.png" alt="Tela de criação de nota fiscal manual" />
+</Frame>
+
+<Tabs>
+<Tab title="Cabeçalho">
+- **Fornecedor**: Informar o fornecedor que está fazendo o pedido de compra
+- **Data de Entrega**: Informar a data que o fornecedor irá entregar os produtos
+</Tab>
+
+<Tab title="Conteúdo">
+- **Data de Lançamento**: Informar a Data de Lançamento do documento (data que irá contabilizar).
+- **Data de Documento**: Informar a Data do Documento
+</Tab>
+
+<Tab title="Linhas">
+- **Ação**: Excluir a linha
+- **Item**: Informar o item/despesa que realizou a compra
+- **Quantidade**: Informar a quantidade comprada (lembrando da conversão de medida)
+- **Unidade de Medida**: Informar a unidade de medida (Conversão de Caixa 12 UN (CX12UN)
+- **Preço Unitário**: Informar o preço unitário do item/despesa conforme acordado com fornecedor.
+- **Despesa Adicional**: Informação para documentos da SEFAZ (questões de impostos), portanto se for manual não precisa preencher
+- **Valor da Despesa**: Informação para documentos da SEFAZ (questões de impostos), portanto se for manual não precisa preencher
+- **Utilização**: Informar a utilização dessa compra
+- **Depósito Padrão**: Informar o depósito dessa compra (se for item que controla estoque, essa informação é importante)
+- **Total**: Valor total do item ((Quantidade*PreçoUnitário) + Despesas Adicionais)
+</Tab>
+
+<Tab title="Despesas Adicionais">
+- **Ação**: Excluir a linha
+- **Despesa Adicional**: Informar a Despesa adicional do documento (frete por exemplo)
+- **Valor da Despesa**: Informar o valor da despesa adicional do documento
+</Tab>
+
+<Tab title="Parcelas">
+- **Ação**: Excluir a linha
+- **Linha**: B1Food irá trazer os números automáticos
+- **Data de Vencimento**: Informar a data do vencimento da parcela
+- **Valor**: Informar o valor da parcela
+<Warning>
+O Valor **total das parcelas** precisa ser o mesmo do **total do documento**
+</Warning>
+</Tab>
+
+<Tab title="Financeiro">
+- **Forma de Pagamento**: Informar a forma de pagamento do documento
+</Tab>
+
+<Tab title="Imposto">
+- **Modelo**: Informar o modelo do documento
+- **Série NF-e**: Informar o número de série do documento (se não for um documento fiscal pode colocar 1)
+- **Número NF-e**: Informar o número de NF-e do documento (se não for um documento fiscal pode colocar AAAAMMDD (20210101))
+</Tab>
+</Tabs>
+
+Para finalizar a **Nota Fiscal de Entrada** é possível informar uma **Observação** para detalhar alguma informação ou até mesmo **Anexar** algum documento. Depois disso basta clicar em **Salvar**
+
+<Frame>
+<img src="/images/nf_entrada_03.png" alt="Salvamento da nota fiscal" />
+</Frame>
+
+Pode acontecer de esquecer de preencher algum campo, com isso o B1Food irá apresentar uma mensagem de erro, segue exemplo
+
+<Frame>
+<img src="/images/nf_entrada_05.png" alt="Mensagem de erro" />
+</Frame>
+
+Caso o **Nota Fiscal de Entrada** estiver certo irá aparecer uma mensagem de **Sucesso - Requisição concluída com sucesso** e será necessário clicar no botão **Voltar** para ir na página inicial do **Nota Fiscal de Entrada**
+
+<Frame>
+<img src="/images/nf_entrada_06.png" alt="Confirmação de sucesso" />
+</Frame>
+
+Será listada a **Nota Fiscal de Entrada** que acabou de criar e com isso será listado 4 ações para essa **Nota Fiscal de Entrada**, segue abaixo explicativo de cada uma delas
+
+<Frame>
+<img src="/images/nf_entrada_07.png" alt="Ações disponíveis para a nota fiscal" />
+</Frame>
+
+<Tabs>
+<Tab title="🔍 Visualizar">
+A ação **Visualizar** irá abrir a **Nota Fiscal de Entrada** para poder avaliar algum item por exemplo.
+<Frame>
+<img src="/images/nf_entrada_08.png" alt="Visualização da nota fiscal" />
+</Frame>
+</Tab>
+
+<Tab title="✏️ Editar">
+A ação **Editar** irá abrir a **Nota Fiscal de Entrada** para realizar alguma edição
+<Frame>
+<img src="/images/nf_entrada_09.png" alt="Edição da nota fiscal" />
+</Frame>
+</Tab>
+
+<Tab title="📤 Enviar">
+A ação **Enviar** irá enviar para o SAP Business One a criação dessa **Nota Fiscal de Entrada**
+<Frame>
+<img src="/images/nf_entrada_10.jpg" alt="Envio da nota fiscal" />
+</Frame>
+</Tab>
+
+<Tab title="🔄 Refazer de-para">
+A ação **Refazer de-para de itens** é apenas para documentos da **SEFAZ**
+</Tab>
+</Tabs>
+
+Se você enviou a **Nota Fiscal de Entrada** ela entrou em uma **aprovação**, pode ser que você que faça ela ou outro usuário, mas irei explicar como realizar essa aprovação
+
+<Frame>
+<img src="/images/nf_entrada_11.png" alt="Tela de aprovação" />
+</Frame>
+
+<Tabs>
+<Tab title="👍 Aprovar">
+A ação **Aprovar** irá enviar para o SAP Business One a criação dessa **Nota Fiscal de Entrada**
+<Frame>
+<img src="/images/nf_entrada_12.png" alt="Aprovação da nota fiscal" />
+</Frame>
+</Tab>
+
+<Tab title="👎 Rejeitar">
+A ação **Rejeitar** será necessário informar o **Motivo** que rejeitou, para que o usuário que fez saiba e consiga realizar as devidas alterações para reenviar novamente.
+<Frame>
+<img src="/images/nf_entrada_13.png" alt="Rejeição da nota fiscal" />
+</Frame>
+</Tab>
+</Tabs>
+
+Caso a **Nota Fiscal de Entrada** for aprovada, ela irá entrar para fila de envio para o SAP Bussines One, durante esse processo o **Status** ficará ⚫, caso der tudo certo o **Status** irá ficar 🟢 e se der algum erro ao integrar com o SAP Business One o **Status** irá ficar 🔴 e irá apresentar o erro
+
+---
+
+## NF-e - SEFAZ
+
+A **Nota fiscal de Entrada - SEFAZ** são os lançamentos de documentos que possuem XML, portanto o B1Food realiza as consultas direto no ambiente da SEFAZ, onde será criado no SAP Business One uma **Nota Fiscal de Entrada**.
+
+Na tela inicial da **Nota fiscal de Entrada - SEFAZ** é possível consultar todas que já foram criadas e qual o **Status** de cada uma delas.
+
+<Frame>
+<img src="/images/nf_entrada_xml_01.png" alt="Tela inicial das notas fiscais SEFAZ" />
+</Frame>
+
+<Note>
+**Legenda dos Status:**
+
+- **🟠 Aguardando ciência**: Esse Status quer dizer que a Nota Fiscal de Entrada está aguardando para ser realizado a ciência da operação (manifesto) ou a não ciência da operação
+- **🔴 Documento mal informado**: Esse Status quer dizer que o Fornecedor não existe no SAP Business One ou não existe o De Para de Itens para esse Fornecedor, basta passar o mouse no Status que irá te apresentar
+- **🟠 Documento aguardando envio**: Esse Status quer dizer o Fornecedor e De Para estão corretos, basta realizar as modificações do documento para depois enviar para o SAP Business One
+- **⚫ Aguardando retorno do ERP**: Esse Status quer dizer que a Nota Fiscal de Entrada está na fila para integração no SAP Business One
+- **🟢 Finalizado**: Esse Status quer dizer que foi criado uma Nota Fiscal de Entrada no SAP Business One (pode ser um esboço também, depende da sua configuração)
+- **🔴 Erro**: Esse Status quer dizer que o SAP Business One gerou algum erro, para saber qual é basta passar o mouse encima do Status
+</Note>
+
+Ao listar as **Notas Fiscal de Entrada** que foram emitidas conta a filial, é necessário realizar o **Manifesto do Documento (Ciência da Operação)** caso você confirme esse documento ou a **Não Manifesto do Documento (Desconhecimento da operação)** caso desconheça esse documento.
+
+<Frame>
+<img src="/images/nf_entrada_xml_02.png" alt="Manifesto de documentos" />
+</Frame>
+
+<Tabs>
+<Tab title="✅ Manifestar Documento">
+A ação **Manifestar Documento** irá informar a SEFAZ que a empresa reconhece a compra e depois disso que a SEFAZ libera o XML com todas as informações
+<Frame>
+<img src="/images/nf_entrada_xml_18.png" alt="Manifesto de documento" />
+</Frame>
+</Tab>
+
+<Tab title="❌ Não Manifestar Documento">
+A ação **Não Manifestar Documento** irá informar a SEFAZ que não reconhece a compra
+<Frame>
+<img src="/images/nf_entrada_xml_19.png" alt="Não manifesto de documento" />
+</Frame>
+</Tab>
+</Tabs>
+
+Após realizar essa ação, é necessário aguardar a **SEFAZ retornar** para o B1Food os dados detalhados do documento (XML), portanto o documento 
+irá ficar com o **Status de Documento aguardando ciência** 🟠
+
+<Warning>
+Não existe um prazo definido, mas esse processo geralmente é rápido
+</Warning>
+
+Quando o documento estiver com a ciência, a próxima etapa é a verificação do B1Food se o Fornecedor existe no SAP Business One (essa verificação é pelo CNPJ), caso não existe irá ficar com o **Status de Documento mal Informado – Fornecedor não encontrado no Sistema** 🔴
+
+<Frame>
+<img src="/images/nf_entrada_xml_03.png" alt="Fornecedor não encontrado" />
+</Frame>
+
+Portanto é necessário **cadastrar o fornecedor** no SAP Business One e aguardar a integração enviar os dados para o B1Food. 
+Com os dados no B1Food, é necessário fazer a **verificação do documento** (pois a verificação da existencia do fornecedor é automática na primeira vez apenas), para isso clique no botão **Visualizar registro**
+
+<Frame>
+<img src="/images/nf_entrada_xml_04.png" alt="Verificação de fornecedor" />
+</Frame>
+
+Para essa verificação é necessário clicar no **botão Verificar fornecedor**, com isso o **B1Food irá fazer análise** se o fornecedor existe na base.
+
+<Frame>
+<img src="/images/nf_entrada_xml_05.png" alt="Botão verificar fornecedor" />
+</Frame>
+
+Caso ele encontrou o fornecedor, a próxima verificação do B1Food é se existe **DE PARA para esse Fornecedor/Itens**, e caso não exista esse DE PARA, o Status ficará **Documento mal Informado – Itens não encontrados no de-para de produtos no catálogo do fornecedor**
+
+<Frame>
+<img src="/images/nf_entrada_xml_06.png" alt="Itens não encontrados no de-para" />
+</Frame>
+
+Para criar esse DE PARA dos itens que não possuem é necessário clicar no botão **Visualizar registro**
+
+<Frame>
+<img src="/images/nf_entrada_xml_07.png" alt="Visualização para criar de-para" />
+</Frame>
+
+Ao abrir o documento, será listados os **itens dessa da Nota Fiscal** e caso o item não tiver DE PARA terá o botão para **criação do DE PARA**
+
+<Frame>
+<img src="/images/nf_entrada_xml_08.png" alt="Criação de de-para" />
+</Frame>
+
+Para esse cadastro será necessário escolher qual o produto do SAP Business One equivale à esse produto do fornecedor e mais algumas informações. Após isso basta clicar em **Salvar**
+
+<Frame>
+<img src="/images/nf_entrada_xml_09.png" alt="Cadastro de de-para" />
+</Frame>
+
+<Tabs>
+<Tab title="Campos">
+- **Fornecedor**: B1Food irá trazer automaticamente o Nome do Fornecedor
+- **ID Origem**: B1Food irá trazer automaticamente o código do item do seu fornecedor
+- **Produto**: Informar qual o item do SAP Business One que é equivalente
+- **Unidade de Medida**: Informar a Unidade de Medida que geralmente compra desse fornecedor (para o item informado)
+</Tab>
+</Tabs>
+
+<Warning>
+É necessário realizar esse processo com todos os itens do documento, até não ter mais nenhum item para realizar o DE PARA
+</Warning>
+
+Com o **fornecedor existente** e **de para de itens criados**, é necessário **editar os documentos** com algumas informações necessárias, para isso clique no botão **Alterar registro**
+
+<Frame>
+<img src="/images/nf_entrada_xml_10.png" alt="Alteração de registro" />
+</Frame>
+
+Para alterar todas as informações dos itens (caso for a mesma informação) pode ser usado o botão **Adicionar replicâncias**, isso irá facilitar o preenchimento.
+
+<Frame>
+<img src="/images/nf_entrada_xml_11.png" alt="Adicionar replicâncias" />
+</Frame>
+
+<Tabs>
+<Tab title="Cabeçalho">
+- **Fornecedor**: B1Food irá trazer automaticamente o Fornecedor da NF-e
+</Tab>
+
+<Tab title="Conteúdo">
+- **Data de Lançamento**: Informar a Data de Lançamento do documento (data que irá contabilizar).
+- **Data de Documento**: B1Food irá trazer automaticamente a Data de emissão da NFe
+</Tab>
+
+<Tab title="Linhas">
+- **Ação**: Excluir a linha
+- **Item**: B1Food irá trazer o item do DE PARA
+- **Quantidade**: B1Food irá trazer a quantidade da NFe
+- **Unidade de Medida**: B1Food irá trazer a Unidade de Medida do DE PARA, mas é possível ajustar caso necessário
+- **Preço Unitário**: B1Food irá trazer preço unitário da NFe
+- **Despesa Adicional**: B1Food irá trazer o tipo das despesas **caso tiver** (nas linhas podem ser IPI, FCP, ICMS-ST, OUTROS)
+- **Valor da Despesa**: B1Food irá trazer o valor das despesas **caso tiver** (nas linhas podem ser IPI, FCP, ICMS-ST, OUTROS)
+- **Utilização**: Informar a utilização dessa compra (motivo da compra)
+- **Depósito Padrão**: Informar o depósito dessa compra (se for item que controla estoque, essa informação é importante)
+- **Total**: Valor total do item ((Quantidade*PreçoUnitário) + Despesas Adicionais)
+</Tab>
+
+<Tab title="Despesas Adicionais">
+- **Ação**: Excluir a linha
+- **Despesa Adicional**: B1Food irá trazer o tipo das despesas **caso tiver** (são valores que serão quebrados depois por itens, como frete e seguro)
+- **Valor da Despesa**: B1Food irá trazer o valor das despesas **caso tiver** (são valores que serão quebrados depois por itens, como frete e seguro)
+</Tab>
+
+<Tab title="Financeiro">
+- **Forma de Pagamento**: Informar a forma de pagamento do documento
+</Tab>
+
+<Tab title="Imposto">
+- **Modelo**: B1Food irá trazer o NF-e como padrão
+- **Série NF-e**: B1Food irá informar a série da NFe
+- **Número NF-e**: B1Food irá informar o número da NFe
+</Tab>
+</Tabs>
+
+Sobre as parcelas, caso o **fornecedor informou** as parcelas na NFe, elas serão preenchidas automaticamente e caso o **fornecedor não informar**, será obrigatório informar as parcelas manualmente.
+
+<Frame>
+<img src="/images/nf_entrada_xml_12.png" alt="Parcelas da nota fiscal" />
+</Frame>
+
+<Tabs>
+<Tab title="Parcelas">
+- **Ação**: Excluir a linha
+- **Linha**: B1Food irá trazer os números automáticos
+- **Data de Vencimento**: Informar a data do vencimento da parcela
+- **Valor**: Informar o valor da parcela
+<Warning>
+O Valor **total das parcelas** precisa ser o mesmo do **total do documento**
+</Warning>
+</Tab>
+</Tabs>
+
+Para finalizar a **Nota Fiscal de Entrada** é possível informar uma **Observação** (irá vir automaticamente a mesma Observações da NFe, mas é possível modificar) para detalhar alguma informação ou até mesmo **Anexar** (**Clique para Selecionar os arquivos**) algum documento. Depois disso basta clicar em **Salvar**
+
+<Frame>
+<img src="/images/nf_entrada_xml_15.png" alt="Salvamento da nota fiscal SEFAZ" />
+</Frame>
+
+Pode acontecer de esquecer de preencher algum campo, com isso o B1Food irá apresentar uma mensagem de erro, segue exemplo
+
+<Frame>
+<img src="/images/nf_entrada_05.png" alt="Mensagem de erro" />
+</Frame>
+
+Caso o **Nota Fiscal de Entrada** estiver certo irá aparecer uma mensagem de **Sucesso - Requisição concluída com sucesso** e será necessário clicar no botão **Voltar** para ir na página inicial do **Nota Fiscal de Entrada**
+
+<Frame>
+<img src="/images/nf_entrada_06.png" alt="Confirmação de sucesso" />
+</Frame>
+
+Será listada a **Nota Fiscal de Entrada** que acabou de criar e com isso será listado 4 ações para essa **Nota Fiscal de Entrada**, segue abaixo explicativo de cada uma delas
+
+<Frame>
+<img src="/images/nf_entrada_07.png" alt="Ações disponíveis para a nota fiscal" />
+</Frame>
+
+<Tabs>
+<Tab title="🔍 Visualizar">
+A ação **Visualizar** irá abrir a **Nota Fiscal de Entrada** para poder avaliar algum item por exemplo.
+<Frame>
+<img src="/images/nf_entrada_08.png" alt="Visualização da nota fiscal" />
+</Frame>
+</Tab>
+
+<Tab title="✏️ Editar">
+A ação **Editar** irá abrir a **Nota Fiscal de Entrada** para realizar alguma edição
+<Frame>
+<img src="/images/nf_entrada_09.png" alt="Edição da nota fiscal" />
+</Frame>
+</Tab>
+
+<Tab title="📤 Enviar">
+A ação **Enviar** irá enviar para o SAP Business One a criação dessa **Nota Fiscal de Entrada**
+<Frame>
+<img src="/images/nf_entrada_10.jpg" alt="Envio da nota fiscal" />
+</Frame>
+</Tab>
+
+<Tab title="🔄 Refazer de-para">
+A ação **Refazer de-para de itens** é apenas para documentos da **SEFAZ**
+</Tab>
+</Tabs>
+
+Se você enviou a **Nota Fiscal de Entrada** ela entrou em uma **aprovação**, pode ser que você que faça ela ou outro usuário, mas irei explicar como realizar essa aprovação
+
+<Frame>
+<img src="/images/nf_entrada_11.png" alt="Tela de aprovação" />
+</Frame>
+
+<Tabs>
+<Tab title="👍 Aprovar">
+A ação **Aprovar** irá enviar para o SAP Business One a criação dessa **Nota Fiscal de Entrada**
+<Frame>
+<img src="/images/nf_entrada_12.png" alt="Aprovação da nota fiscal" />
+</Frame>
+</Tab>
+
+<Tab title="👎 Rejeitar">
+A ação **Rejeitar** será necessário informar o **Motivo** que rejeitou, para que o usuário que fez saiba e consiga realizar as devidas alterações para reenviar novamente.
+<Frame>
+<img src="/images/nf_entrada_13.png" alt="Rejeição da nota fiscal" />
+</Frame>
+</Tab>
+</Tabs>
+
+Caso a **Nota Fiscal de Entrada** for aprovada, ela irá entrar para fila de envio para o SAP Bussines One, durante esse processo o **Status** ficará ⚫, caso der tudo certo o **Status** irá ficar 🟢 e se der algum erro ao integrar com o SAP Business One o **Status** irá ficar 🔴 e irá apresentar o erro

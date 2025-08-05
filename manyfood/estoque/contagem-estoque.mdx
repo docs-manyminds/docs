@@ -1,0 +1,158 @@
+---
+title: 'Contagem de Estoque'
+description: 'Realizar contagem de estoque e inventário'
+---
+
+# Contagem de Estoque
+
+**Menu:** B1Food → Inventário
+
+---
+
+O Módulo de **Inventário** é integrada ao SAP Business One e quem irá utilizarar é a equipe da loja, pois esse módulo é para criação de uma contagem de estoque, onde ela pode ser feita diária, semanal ou mensagel, depende do processo definido pela empresa.
+
+Na tela inicial do **Inventário** é possível ver todos que já foram criadas e qual o **Status** de cada uma delas.
+
+<Frame>
+<img src="/images/inventario_01.png" alt="Tela inicial do inventário" />
+</Frame>
+
+<Note>
+**Legenda dos Status:**
+
+- **🔵 Contagem em Andamento**: Esse Status quer dizer que o Inventário está aguardando para ser enviada para entrar na fila da integração com SAP Business One
+- **⚫ Aguardando integração**: Esse Status quer dizer que o Inventário está na fila para integração no SAP Business One
+- **🟢 Contagem Finalizado**: Esse Status quer dizer que foi criado um Recebimento de Mercadoria total com base o Inventário
+- **🔴 Erro**: Esse Status quer dizer que o SAP Business One gerou algum erro, para saber qual é basta passar o mouse encima do Status
+</Note>
+
+Existe duas maneiras de criar um **Inventário**, segue cada um deles:
+
+---
+
+## Contagem de Estoque - Manual
+
+Para conseguir criar uma nova, basta clicar em **Novo** e selecionar **Inventário Manual**
+
+<Frame>
+<img src="/images/inventario_06.png" alt="Seleção de inventário manual" />
+</Frame>
+
+Uma nova página será aberta automaticamente, nessa tela é possível inserir os itens **Unitários** ou inserir os itens por **Grupo de Itens**, irei demonstrar para vocês as duas maneiras.
+
+Vamos começar por **Grupo de Itens**, para isso basta clicar no botão **Adicionar Itens por Grupo** e será listado todos os grupos de itens cadastrados no SAP Business One
+
+<Frame>
+<img src="/images/inventario_04.png" alt="Lista de grupos de itens" />
+</Frame>
+
+Após listar todos os **Grupo de Itens**, é necessário selecionar apenas 1x, basta clicar 1x no grupo desejado.
+
+Será listado todos os itens de Compras daquele Grupo selecionado, portanto basta preencher os campos dos itens que você deseja e clicar em **Incluir Produtos**
+
+<Frame>
+<img src="/images/inventario_05.png" alt="Seleção de itens do grupo" />
+</Frame>
+
+<Warning>
+Lembrando que **não precisa ser todos os itens**, apenas os itens que você precisa.
+</Warning>
+
+<Tabs>
+<Tab title="Campos">
+- **Quantidade**: Informar a quantidade que deseja comprar, lembrando que não é quantidade todal dos itens (caso utilize conversões de medida)
+- **Unidade de Medida**: Informar a Unidade de Medida (conversão), exemplo: Irá comprar uma Caixa com 12 Unidades, basta escolher CX12UN
+</Tab>
+</Tabs>
+
+Depois da última etapa, será retornado para página inicial do **Inventário** e perceba que os itens que selecionou no grupo estão preenchidos nas linhas. Esse processo pode ser realizado **quantas vezes forem necessário**, depende dos grupos que vocês possuem. 
+
+Caso inseriu um item errado, basta clicar no ❌ ao final da linha do item, isso irá excluir aquela linha do Inventário
+
+<Frame>
+<img src="/images/inventario_07.png" alt="Lista de itens do inventário" />
+</Frame>
+
+Para finalizar o **Inventário**, é necessário informar os dados do **radapé do documento** e clicar em **Salvar**
+
+<Frame>
+<img src="/images/inventario_08.png" alt="Rodapé do documento de inventário" />
+</Frame>
+
+<Tabs>
+<Tab title="Campos">
+- **Depósito**: Será listado os depósitos da Filial do B1Food, portanto basta selecionar qual depósito seria essa contagem
+- **Data de Criação**: Informar a data que foi realizada a contagem e não quando ela foi lançada
+- **Observações**: Caso sejá necessário informar uma oberservações para histórico
+</Tab>
+</Tabs>
+
+Ao **Salvar**, a tela ficará sem os dados e será necessário clicar em **Voltar** para ir na página inicial do **Inventário**, onde deverá realizar a última etapa do processo.
+
+<Frame>
+<img src="/images/inventario_09.png" alt="Página inicial após salvar" />
+</Frame>
+
+Será listado o **Inventário** que acabou de criar e com isso será listado 4 ações para esse **Inventário**, segue abaixo explicativo de cada uma delas
+
+<Frame>
+<img src="/images/inventario_10.png" alt="Ações disponíveis para o inventário" />
+</Frame>
+
+<Tabs>
+<Tab title="🔍 Visualizar">
+A ação **Visualizar** irá abrir o **Inventário** para poder avaliar algum item por exemplo.
+<Frame>
+<img src="/images/inventario_14.png" alt="Visualização do inventário" />
+</Frame>
+</Tab>
+
+<Tab title="❌ Excluir">
+A ação **Excluir** irá apagar o **Inventário** criada
+<Frame>
+<img src="/images/inventario_12.png" alt="Exclusão do inventário" />
+</Frame>
+</Tab>
+
+<Tab title="✅ Enviar">
+A ação **Enviar** irá enviar para o SAP Business One a criação desse **Inventário**
+<Frame>
+<img src="/images/inventario_11.png" alt="Envio do inventário" />
+</Frame>
+</Tab>
+
+<Tab title="✏️ Editar">
+A ação **Editar** irá abrir o **Inventário** para realizar alguma edição
+<Frame>
+<img src="/images/inventario_13.png" alt="Edição do inventário" />
+</Frame>
+</Tab>
+</Tabs>
+
+Se você enviou o **Inventário**, **depende da configuração** do seu B1Food ele pode ter ido direto para integrar com o SAP Business One ou ele pode ter entrado na **aprovação**, pode ser que você que faça ela ou outro usuário, mas irei explicar como realizar essa aprovação
+
+<Frame>
+<img src="/images/inventario_15.png" alt="Tela de aprovação" />
+</Frame>
+
+<Tabs>
+<Tab title="👍 Aprovar">
+A ação **Aprovar** irá enviar para o SAP Business One a criação desse **Inventário**
+<Frame>
+<img src="/images/inventario_16.png" alt="Aprovação do inventário" />
+</Frame>
+</Tab>
+
+<Tab title="👎 Rejeitar">
+A ação **Rejeitar** será necessário informar o **Motivo** que rejeitou, para que o usuário que fez saiba e consiga realizar as devidas alterações para reenviar novamente.
+<Frame>
+<img src="/images/inventario_17.png" alt="Rejeição do inventário" />
+</Frame>
+</Tab>
+</Tabs>
+
+Caso o **Inventário** for aprovado, ele irá entrar para fila de envio para o SAP Bussines One, durante esse processo o **Status** ficará ⚫, caso der tudo certo o **Status** irá ficar 🟢 e se der algum erro ao integrar com o SAP Business One o **Status** irá ficar 🔴 e irá apresentar o erro
+
+---
+
+## Contagem de Estoque - Agrupado

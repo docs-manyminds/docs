@@ -1,0 +1,218 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "willow",
+  "name": "Manual Manyminds",
+  "colors": {
+    "primary": "#007ACC",
+    "light": "#00B4DB",
+    "dark": "#005A9E"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "ManyFood",
+        "groups": [
+          {
+            "group": "Introdução",
+            "pages": [
+              "manyfood/index"
+            ]
+          },
+          {
+            "group": "Administração",
+            "pages": [
+              {
+                "group": "Geral",
+                "pages": [
+                            "manyfood/adm/geral/usuarios"
+                ]
+              },
+              {
+                "group": "Compras",
+                "pages": [
+                            "manyfood/adm/compras/configurar-certificados",
+                            "manyfood/adm/compras/configurar-certificados-prefeitura",
+                            "manyfood/adm/compras/configuracoes-empresa",
+                            "manyfood/adm/compras/configuracoes-filial",
+                            "manyfood/adm/compras/campos-extras-sefaz",
+                            "manyfood/adm/compras/de-para-utilizacao",
+                            "manyfood/adm/compras/de-para-forma-pagamento",
+                            "manyfood/adm/compras/de-para-ativo",
+                            "manyfood/adm/compras/configuracoes-parceiro",
+                            "manyfood/adm/compras/agrupamento-manual",
+                            "manyfood/adm/compras/de-para-unidade-medida"
+                ]
+              },
+              {
+                "group": "Conciliacao",
+                "pages": [
+                            "manyfood/adm/conciliacao/configurar-importador",
+                            "manyfood/adm/conciliacao/configurar-conciliacao",
+                            "manyfood/adm/conciliacao/configurar-filial",
+                            "manyfood/adm/conciliacao/produtos",
+                            "manyfood/adm/conciliacao/cargos",
+                            "manyfood/adm/conciliacao/formas de pagamento",
+                            "manyfood/adm/conciliacao/justificativas",
+                            "manyfood/adm/conciliacao/textos-definidos-erp",
+                            "manyfood/adm/conciliacao/funcionarios",
+                            "manyfood/adm/conciliacao/terminais"
+                ]
+              },
+              {
+                "group": "Estoque",
+                "pages": [
+                            "manyfood/adm/estoque/configurar-lista-preco",
+                            "manyfood/adm/estoque/de-para-destino-baixa",
+                            "manyfood/adm/estoque/ficha-tecnica",
+                            "manyfood/adm/estoque/agrupamento-manual",
+                            "manyfood/adm/estoque/de-para-unidade-medida"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Compras",
+            "pages": [
+              {
+                "group": "Cadastros",
+                "pages": [
+                            "manyfood/compras/cadastro/de-para-produto",
+                            "manyfood/compras/cadastro/de-para-servico",
+                            "manyfood/compras/cadastro/de-para-modelo"
+                ]
+              },
+              "manyfood/compras/painel-documentos",
+              "manyfood/compras/solicitacao-compra",
+              "manyfood/compras/pedido-compra",
+              "manyfood/compras/recebimento-mercadoria",
+              "manyfood/compras/nota-fiscal-entrada-mercadoria",
+              "manyfood/compras/nota-fiscal-entrada-servico",
+              "manyfood/compras/nota-fiscal-entrada-cte",
+              "manyfood/compras/dev-nota-fiscal-entrada",
+              "manyfood/compras/nota-fiscal-saida"
+            ]
+          },
+          {
+            "group": "Vendas",
+            "pages": [
+              "manyfood/vendas/pedido-venda"
+            ]
+          },
+          {
+            "group": "Conciliacao",
+            "pages": [
+              {
+                "group": "Cadastros",
+                "pages": [
+                            "manyfood/conciliacao/cadastro/de-para-produto"
+                ]
+              },
+              "manyfood/conciliacao/monitoramento",
+              "manyfood/conciliacao/monitoramento-saldo",
+              "manyfood/conciliacao/realizar-conciliacao",
+              "manyfood/conciliacao/manutencao",
+              "manyfood/conciliacao/substituicao-cupom-fiscal",
+              "manyfood/conciliacao/relatorio-conciliacao"
+            ]
+          },
+          {
+            "group": "Estoque",
+            "pages": [
+              {
+                "group": "Inventario",
+                "pages": [
+                            "manyfood/estoque/contagem-estoque",
+                            "manyfood/estoque/conf-desvio-contagem"
+                ]
+              },
+              {
+                "group": "Transferencia de Estoque",
+                "pages": [
+                            "manyfood/estoque/pedido de transferencia",
+                            "manyfood/estoque/transferencia"
+                ]
+              },
+              "manyfood/estoque/baixa-estoque"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "ManyBrasil",
+        "groups": [
+          {
+            "group": "Introdução",
+            "pages": [
+              "manybrasil/index"
+            ]
+          },
+          {
+            "group": "Administração",
+            "pages": [
+              {
+                "group": "Imobilizado",
+                "pages": [
+                            "manybrasil/adm/imobilizado/localizacao-ativo"
+                ]
+              },
+              {
+                "group": "Requisição de Compra",
+                "pages": [
+                            "manybrasil/adm/req_compra/categoria-compra"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Imobilizado",
+            "pages": [
+              "manybrasil/imobilizado/cautela-bens",
+              "manybrasil/imobilizado/inventario",
+              "manybrasil/imobilizado/imobilizado-nao-inventariado",
+              "manybrasil/imobilizado/consulta-ativos"
+            ]
+          },
+          {
+            "group": "Requisição de Compra",
+            "pages": [
+              "manybrasil/req_compra/requisicao-compra"
+            ]
+          }
+        ]
+      }
+    ],
+    
+    "global": {
+      "anchors": [
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "css": {
+    "variables": {
+      "--logo-height": "40px"
+    }
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Manyminds",
+        "href": "https://www.manyminds.com.br/"
+      },
+      {
+        "label": "Deskmanager",
+        "href": "https://manyminds.desk.ms"
+      }
+        ]
+  },
+  "footer": {
+    "socials": {
+      "instagram": "https://www.instagram.com/manyminds.br/",
+      "linkedin": "https://www.linkedin.com/company/manyminds/"
+    }
+  }
+}

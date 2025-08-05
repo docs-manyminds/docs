@@ -1,0 +1,70 @@
+---
+title: 'Transferência de Depósito'
+description: 'Transferência de produtos entre depósitos'
+---
+
+# Transferência de Depósito
+
+**Menu:** B1Food → Estoque → Transferência de Depósito
+
+---
+
+A **Transferência de depósito** será utilizada quando existe mais de uma localização física para **mesma filial (CNPJ)**, exemplo: 
+Na FILIAL A existe o depósito **CENTRAL**, **BAR** e **COZINHA**
+
+Na tela inicial da **Transferência de depósito** é possível ver todas que já foram criadas e qual o **Status** de cada uma delas.
+
+<Frame>
+<img src="/images/transferencia_01.png" alt="Tela inicial da transferência de depósito" />
+</Frame>
+
+<Note>
+**Legenda dos Status:**
+
+- **⚫ Transferência aguardando confirmação do ERP**: Esse Status quer dizer que o Transferência está na fila para integração no SAP Business One
+- **🟢 Transferência Finalizada**: Esse Status quer dizer que a Transferência entrou no SAP Bussines One.
+- **🔴 Erro**: Esse Status quer dizer que o SAP Business One gerou algum erro, para saber qual é basta passar o mouse encima do Status
+</Note>
+
+Para conseguir criar uma nova, basta clicar em "Novo" e na próxima tela é necessário realizar o preenchimento dos campos
+
+<Frame>
+<img src="/images/transferencia_02.png" alt="Tela de criação de transferência" />
+</Frame>
+
+<Tabs>
+<Tab title="Cabeçalho">
+- **Data de Entrega**: Informar a data que foi realizado a transferência
+- **Depósito Origem**: Informar o depósito que o produto irá sair
+- **Depósito Destino**: Informar o depósito que o produto irá entrar
+</Tab>
+
+<Tab title="Linhas">
+- **Item**: Informar o item que deseja transferir.
+- **Quantidade**: Informar a quantidade total que será transferido
+- **Unidade de Medida**: Informar a unidade de medida padrão de estoque (UN, KG, LT ...)
+- **Em Estoque**: Se estiver com a configuração marcada, irá aparecer esse campo informando a quantidade desse item no estoque de origem
+- **Ultima sincronização**: Se estiver com a configuração marcada, irá aparecer quando foi feito a consulta do estoque de origem no SAP
+- **Ação**: Excluir a linha
+</Tab>
+</Tabs>
+
+Para finalizar a **Transferência de depósito** é possível informar uma **Observação** para detalhar alguma informação e depois disso basta clicar em **Salvar**
+
+<Frame>
+<img src="/images/transferencia_04.png" alt="Salvamento da transferência" />
+</Frame>
+
+Pode acontecer de esquecer de preencher algum campo, com isso o B1Food irá apresentar uma **mensagem de erro**, segue exemplo
+
+<Frame>
+<img src="/images/transferencia_05.png" alt="Mensagem de erro" />
+</Frame>
+
+Caso o **Transferência de depósito** estiver certo irá aparecer uma mensagem de **Registro adicionado com sucesso** e será necessário clicar no botão **Voltar** para ir na página inicial do **Transferência de depósito**
+
+<Frame>
+<img src="/images/transferencia_03.png" alt="Confirmação de sucesso" />
+</Frame>
+
+A **Transferência de depósito** irá entrar para fila de envio para o SAP Bussines One, durante esse processo o **Status** ficará ⚫, caso der tudo certo o **Status** irá ficar 🟢 e se der algum erro ao integrar com o SAP Business One o **Status** irá ficar 🔴 e irá apresentar o erro

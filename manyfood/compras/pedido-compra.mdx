@@ -1,0 +1,136 @@
+---
+title: 'Pedido de Compra'
+description: 'Criação e gerenciamento de pedidos de compra'
+---
+
+# Pedido de Compra
+
+**Menu:** B1Food → Compras → Pedido de compra
+
+---
+
+O **Pedido de Compra** é criado quando se tem a necessidade de comprar algo, sabendo-se fornecedor, quantidade, data da entrega e 
+preço dos itens desejados. Ele pode ser criado manualmente no **B1Food** ou vir do SAP Business One, provenientes de **Solicitações 
+de Compras** que foram criadas no B1Food.
+
+Na tela inicial da **Pedido de Compras** é possível consultar todas que já foram criadas e qual o **Status** de cada uma delas.
+
+<Frame>
+<img src="/images/pedido_01.png" alt="Tela inicial dos pedidos de compra" />
+</Frame>
+
+<Note>
+**Legenda dos Status:**
+
+- **🟠 Documento aguardando ciência**: Esse Status é para integração da SEFAZ
+- **🟠 Aguardando envio**: Esse Status quer dizer que a Nota Fiscal de Entrada está aguardando para ser enviada para entrar na fila da integração com SAP Business One
+- **⚫ Aguardando integração**: Esse Status quer dizer que o Pedido de Compra está na fila para integração no SAP Business One
+- **🟢 Pedido Finalizado**: Esse Status quer dizer que foi criado um Recebimento de Mercadoria total com base o Pedido de Compra
+- **🔴 Erro**: Esse Status quer dizer que o SAP Business One gerou algum erro, para saber qual é basta passar o mouse encima do Status
+</Note>
+
+Para conseguir criar uma nova, basta clicar em **Novo** e na próxima tela é necessário informar quando precisa dos produtos e quais produtos/quantidades são necessários.
+
+<Frame>
+<img src="/images/pedido_02.png" alt="Tela de criação de pedido de compra" />
+</Frame>
+
+<Tabs>
+<Tab title="Cabeçalho">
+- **Fornecedor**: Informar o fornecedor que está fazendo o pedido de compra
+- **Data de Entrega**: Informar a data que o fornecedor irá entregar os produtos
+</Tab>
+
+<Tab title="Linhas">
+- **Item**: Informar o item que deseja pedir.
+- **Quantidade**: Informar a quantidade necessária (lembrando da conversão de medida)
+- **Unidade de Medida**: Informar a unidade de medida (Conversão de Caixa 12 UN (CX12UN)
+- **Preço Unitário**: Informar o preço unitário do item conforme acordado com fornecedor.
+- **Em Estoque**: Se estiver com a configuração marcada, irá aparecer esse campo informando a quantidade desse item no estoque
+- **Ultima sincronização**: Se estiver com a configuração marcada, irá aparecer quando foi feito a consulta do estoque no SAP
+- **Sub Total**: Cálculo entre Quantidade multiplicando pelo Preço Unitário
+- **Ação**: Excluir a linha
+</Tab>
+
+<Tab title="Financeiro">
+- **Condição de Pagamento**: Informar a condição de pagamento acordado para esse pedido
+</Tab>
+</Tabs>
+
+Para finalizar o **Pedido de Compras** é possível informar uma **Observação** para detalhar alguma informação e depois disso basta clicar em **Salvar**
+
+<Frame>
+<img src="/images/pedido_03.png" alt="Salvamento do pedido de compra" />
+</Frame>
+
+Pode acontecer de esquecer de preencher algum campo, com isso o B1Food irá apresentar uma mensagem de erro, segue exemplo
+
+<Frame>
+<img src="/images/pedido_04.png" alt="Mensagem de erro" />
+</Frame>
+
+Caso o **Pedido de Compra** estiver certo irá aparecer uma mensagem de **Registro adicionado com sucesso** e será necessário clicar no botão **Voltar** para ir na página inicial do **Pedido de Compra**
+
+<Frame>
+<img src="/images/pedido_05.png" alt="Confirmação de sucesso" />
+</Frame>
+
+Será listado o **Pedido de Compra** que acabou de criar e com isso será listado 4 ações para esse **Pedido de Compra**, segue abaixo explicativo de cada uma delas
+
+<Frame>
+<img src="/images/pedido_10.png" alt="Ações disponíveis para o pedido" />
+</Frame>
+
+<Tabs>
+<Tab title="🔍 Visualizar">
+A ação **Visualizar** irá abrir o **Pedido de Compra** para poder avaliar algum item por exemplo.
+<Frame>
+<img src="/images/pedido_06.png" alt="Visualização do pedido" />
+</Frame>
+</Tab>
+
+<Tab title="✏️ Editar">
+A ação **Editar** irá abrir o **Pedido de Compra** para realizar alguma edição
+<Frame>
+<img src="/images/pedido_07.png" alt="Edição do pedido" />
+</Frame>
+</Tab>
+
+<Tab title="✅ Enviar">
+A ação **Enviar** irá enviar para o SAP Business One a criação desse **Pedido de Compra**
+<Frame>
+<img src="/images/pedido_08.png" alt="Envio do pedido" />
+</Frame>
+</Tab>
+
+<Tab title="❌ Excluir">
+A ação **Excluir** irá apagar o **Pedido de Compra** criado
+<Frame>
+<img src="/images/pedido_09.png" alt="Exclusão do pedido" />
+</Frame>
+</Tab>
+</Tabs>
+
+Se você enviou o **Pedido de Compra**, **depende da configuração** do seu B1Food ele pode ter ido direto para integrar com o SAP Business One ou ele pode ter entrado na **aprovação**, pode ser que você que faça ela ou outro usuário, mas irei explicar como realizar essa aprovação
+
+<Frame>
+<img src="/images/pedido_11.png" alt="Tela de aprovação" />
+</Frame>
+
+<Tabs>
+<Tab title="👍 Aprovar">
+A ação **Aprovar** irá enviar para o SAP Business One a criação desse **Pedido de Compra**
+<Frame>
+<img src="/images/pedido_12.png" alt="Aprovação do pedido" />
+</Frame>
+</Tab>
+
+<Tab title="👎 Rejeitar">
+A ação **Rejeitar** será necessário informar o **Motivo** que rejeitou, para que o usuário que fez saiba e consiga realizar as devidas alterações para reenviar novamente.
+<Frame>
+<img src="/images/pedido_13.png" alt="Rejeição do pedido" />
+</Frame>
+</Tab>
+</Tabs>
+
+Caso o **Pedido de Compra** for aprovado, ele irá entrar para fila de envio para o SAP Bussines One, durante esse processo o **Status** ficará ⚫, caso der tudo certo o **Status** irá ficar 🔵 e se der algum erro ao integrar com o SAP Business One o **Status** irá ficar 🔴 e irá apresentar o erro

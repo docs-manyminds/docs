@@ -16,7 +16,8 @@
           {
             "group": "Introdução",
             "pages": [
-              "manyfood/index"
+              "manyfood/index",
+              "manyfood/changelog"
             ]
           },
           {
@@ -144,7 +145,8 @@
           {
             "group": "Introdução",
             "pages": [
-              "manybrasil/index"
+              "manybrasil/index",
+              "manybrasil/changelog"
             ]
           },
           {

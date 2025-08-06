@@ -53,3 +53,17 @@ nav .nav-logo svg,
 [class*="dark"] .dark-mode {
   display: block !important;
 }
+
+/* Aumentar largura máxima para páginas com mode: center */
+.flex.flex-col.box-border.w-full.relative.grow.mx-auto.2xl\:max-w-2xl.xl\:w-\[calc\(100\%-19rem\)\].max-w-3xl {
+  max-width: 80rem !important;
+  width: calc(100% - 8rem) !important;
+}
+
+/* Para telas muito grandes */
+@media (min-width: 1536px) {
+  .flex.flex-col.box-border.w-full.relative.grow.mx-auto.2xl\:max-w-2xl.xl\:w-\[calc\(100\%-19rem\)\].max-w-3xl {
+    max-width: 90rem !important;
+    width: calc(100% - 6rem) !important;
+  }
+}

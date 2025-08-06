@@ -54,16 +54,37 @@ nav .nav-logo svg,
   display: block !important;
 }
 
-/* Aumentar largura máxima para páginas com mode: center */
-.flex.flex-col.box-border.w-full.relative.grow.mx-auto.2xl\:max-w-2xl.xl\:w-\[calc\(100\%-19rem\)\].max-w-3xl {
-  max-width: 80rem !important;
-  width: calc(100% - 8rem) !important;
+/* Para telas pequenas (640px+) */
+@media (min-width: 640px) {
+  .\32xl\:max-w-2xl {
+    max-width: 60rem;
+  }
 }
 
-/* Para telas muito grandes */
+/* Para telas médias (768px+) */
+@media (min-width: 768px) {
+  .\32xl\:max-w-2xl {
+    max-width: 65rem;
+  }
+}
+
+/* Para telas grandes (1024px+) */
+@media (min-width: 1024px) {
+  .\32xl\:max-w-2xl {
+    max-width: 70rem;
+  }
+}
+
+/* Para telas extra grandes (1280px+) */
+@media (min-width: 1280px) {
+  .\32xl\:max-w-2xl {
+    max-width: 75rem;
+  }
+}
+
+/* Para telas 2x grandes (1536px+) - que você já usa */
 @media (min-width: 1536px) {
-  .flex.flex-col.box-border.w-full.relative.grow.mx-auto.2xl\:max-w-2xl.xl\:w-\[calc\(100\%-19rem\)\].max-w-3xl {
-    max-width: 90rem !important;
-    width: calc(100% - 6rem) !important;
+  .\32xl\:max-w-2xl {
+    max-width: 80rem;
   }
 }
